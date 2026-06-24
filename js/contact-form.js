@@ -40,3 +40,12 @@ export function initContactForm() {
   $$('input, select, textarea', form).forEach((f) =>
     f.addEventListener('input', () => f.closest('.field')?.classList.remove('invalid')));
 }
+fetch("http://10.108.183.115:3000/contact", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    name: "Test"
+  })
+});
